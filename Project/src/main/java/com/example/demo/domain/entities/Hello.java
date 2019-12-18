@@ -1,14 +1,15 @@
 package com.example.demo.domain.entities;
 
 import lombok.Data;
-import org.hibernate.exception.DataException;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.Entity;
 import java.util.Date;
 
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @Data
-public class Hello extends BaseEntity{
+public class Hello extends BaseEntity {
     private String greeting;
     private String name;
     private Date greetingDate;
